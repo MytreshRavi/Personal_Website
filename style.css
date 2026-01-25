@@ -11,6 +11,51 @@ body {
   line-height: 1.6;
 }
 
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+nav {
+  background: #444;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 .hero {
   text-align: center;
   padding: 4rem 1rem;
@@ -61,18 +106,22 @@ ul {
   margin-left: 1.5rem;
 }
 
-.footer {
+footer {
   text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid #1e293b;
-  color: #94a3b8;
+  padding: 1rem 0;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
 }
 
-.footer a {
-  color: #38bdf8;
-  text-decoration: none;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.footer a:hover {
-  text-decoration: underline;
+  nav ul li {
+    margin: 0.5rem 0;
+  }
 }
