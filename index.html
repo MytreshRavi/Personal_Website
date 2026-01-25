@@ -1,116 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-full">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhinava Reddy | DevOps • SRE • Cloud Engineer</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mytresh Ravi | DevOps • SRE • Cloud Engineer</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+
+    .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fade-up 1s ease forwards; opacity: 0; }
+
+    .card {
+      background: rgba(30,41,59,.35);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(148,163,184,.15);
+      border-radius: 1rem;
+      transition: all .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
+      border-color: rgba(245,158,11,.5);
+    }
+
+    .tag {
+      background: rgba(245,158,11,.1);
+      border: 1px solid rgba(245,158,11,.3);
+      color: #fbbf24;
+      padding: .4rem .9rem;
+      border-radius: 9999px;
+      font-size: .8rem;
+    }
+  </style>
 </head>
-<body>
 
-<canvas id="ai-bg"></canvas>
+<body class="min-h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200">
 
-<header class="hero">
-  <h1>ABHINAVA REDDY</h1>
-  <p class="subtitle">DevOps • SRE • Cloud Engineer</p>
-  <p class="tagline">Designing resilient systems that survive chaos</p>
-  <div class="cta">
-    <a href="#projects">View Work</a>
-    <a href="#contact" class="secondary">Contact Me</a>
-  </div>
-</header>
+<main class="max-w-6xl mx-auto px-6 py-20">
 
-<section class="glass about">
-  <h2>👋 About Me</h2>
-  <p>
-    Site Reliability & DevOps Engineer with deep expertise in AWS, Kubernetes,
-    CI/CD, observability, and incident response. I build fault-tolerant,
-    scalable systems and obsess over uptime, automation, and recovery.
-  </p>
-</section>
-
-<section id="projects">
-  <h2>🚀 Flagship Project</h2>
-
-  <div class="project-card">
-    <h3>AETHERION</h3>
-    <p class="project-sub">AI-Driven Cloud Reliability Platform</p>
-
-    <ul>
-      <li>🔮 ML-based incident prediction using metrics + logs</li>
-      <li>⚙️ Automated failover & chaos experiments on Kubernetes</li>
-      <li>📊 Real-time observability dashboards (simulated)</li>
-      <li>☁️ AWS EKS, Terraform, CI/CD, GitOps workflows</li>
-    </ul>
-
-    <p class="impact">
-      Reduced simulated MTTR by <strong>52%</strong> and validated multi-region DR
-      strategies under chaos conditions.
+  <!-- HERO -->
+  <section class="text-center mb-24 fade-up">
+    <h1 class="text-6xl font-serif font-bold text-white mb-4">Mytresh Ravi</h1>
+    <p class="text-2xl text-amber-400 mb-3">DevOps • Site Reliability • Cloud Engineer</p>
+    <p class="max-w-3xl mx-auto text-slate-400">
+      Building scalable, fault-tolerant cloud systems with a strong focus on
+      automation, reliability, monitoring, and incident response.
     </p>
-  </div>
-</section>
+  </section>
 
-<section class="skills glass">
-  <h2>🛠 Tech Stack</h2>
+  <!-- SKILLS -->
+  <section class="mb-20 fade-up" style="animation-delay:.1s">
+    <h2 class="text-3xl font-serif mb-6 text-white">Core Expertise</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="tag">AWS (EKS, EC2, S3, IAM, RDS, CloudWatch)</span>
+      <span class="tag">Kubernetes & Docker</span>
+      <span class="tag">Terraform & Ansible</span>
+      <span class="tag">CI/CD (Jenkins, GitHub)</span>
+      <span class="tag">Monitoring & Observability</span>
+      <span class="tag">Incident Response & On-Call</span>
+      <span class="tag">Disaster Recovery</span>
+      <span class="tag">Python & Bash</span>
+    </div>
+  </section>
 
-  <div class="skill">
-    <span>AWS</span><div class="bar"><div data-level="95"></div></div>
-  </div>
-  <div class="skill">
-    <span>Kubernetes</span><div class="bar"><div data-level="92"></div></div>
-  </div>
-  <div class="skill">
-    <span>Terraform & Ansible</span><div class="bar"><div data-level="90"></div></div>
-  </div>
-  <div class="skill">
-    <span>CI/CD & Jenkins</span><div class="bar"><div data-level="93"></div></div>
-  </div>
-  <div class="skill">
-    <span>Monitoring & SRE</span><div class="bar"><div data-level="94"></div></div>
-  </div>
-</section>
+  <!-- EXPERIENCE -->
+  <section class="mb-20 fade-up" style="animation-delay:.2s">
+    <h2 class="text-3xl font-serif mb-8 text-white">Professional Experience</h2>
 
-<section class="glass">
-  <h2>📜 Experience Highlights</h2>
-  <ul>
-    <li><strong>Xoriant Solutions</strong> — Improved availability by 35%, cut downtime by 40%</li>
-    <li>Reduced release cycles by 50% using Jenkins CI/CD</li>
-    <li>Disaster recovery drills + chaos testing → 50% MTTR reduction</li>
-    <li><strong>Synectiks</strong> — 99.9% uptime, 70% infra automation via Terraform</li>
-  </ul>
-</section>
+    <div class="card p-8 mb-6">
+      <h3 class="text-xl text-white font-semibold">Site Reliability Engineer — Xoriant Solutions</h3>
+      <p class="text-sm text-slate-400 mb-4">Jul 2022 – Nov 2023</p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2">
+        <li>Improved system availability by <b>35%</b> through fault-tolerant cloud architectures</li>
+        <li>Reduced unplanned downtime by <b>40%</b> using proactive monitoring and DR strategies</li>
+        <li>Built Jenkins CI/CD pipelines cutting release cycles by <b>50%</b></li>
+        <li>Executed chaos testing and failover drills, reducing MTTR by <b>50%</b></li>
+      </ul>
+    </div>
 
-<section class="glass">
-  <h2>🎓 Certifications</h2>
-  <ul class="grid">
-    <li>AWS Cloud Practitioner</li>
-    <li>Microsoft Security & Identity</li>
-    <li>MTA – Python</li>
-    <li>Oracle Certified Foundations</li>
-    <li>IBM Cloud Computing</li>
-  </ul>
-</section>
+    <div class="card p-8">
+      <h3 class="text-xl text-white font-semibold">DevOps Engineer — Synectiks</h3>
+      <p class="text-sm text-slate-400 mb-4">Jan 2020 – May 2022</p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2">
+        <li>Designed AWS cloud-native infrastructure supporting <b>99.9%</b> uptime</li>
+        <li>Automated infrastructure using Terraform & Ansible, eliminating <b>70%</b> manual work</li>
+        <li>Led on-call rotations, RCA, cost optimization and long-term stability fixes</li>
+      </ul>
+    </div>
+  </section>
 
-<section class="glass">
-  <h2>🏆 Achievements & Leadership</h2>
-  <ul>
-    <li>🥈 State-level Badminton – 2nd Place</li>
-    <li>🎮 Mobile Game Competition Winner</li>
-    <li>🎭 Volunteer – MILAN & AARUUSH National Fests</li>
-    <li>🍽 Restaurant Supervisor (Operations & Staff Management)</li>
-  </ul>
-</section>
+  <!-- FLAGSHIP PROJECT -->
+  <section class="mb-20 fade-up" style="animation-delay:.3s">
+    <h2 class="text-3xl font-serif mb-6 text-white">Flagship Project</h2>
+    <div class="card p-8">
+      <h3 class="text-2xl text-amber-400 font-semibold mb-3">
+        AETHERION — Cloud Reliability Intelligence Platform
+      </h3>
+      <p class="text-slate-300 mb-4">
+        A simulated SRE platform demonstrating monitoring, incident prediction,
+        chaos testing, and disaster recovery workflows for Kubernetes and AWS systems.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2">
+        <li>Modeled real-world AWS & Kubernetes metrics and logs</li>
+        <li>Conceptual ML-based incident probability scoring</li>
+        <li>Automated failover and chaos testing scenarios</li>
+        <li>Reduced simulated MTTR by <b>52%</b> under failure conditions</li>
+      </ul>
+    </div>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>📬 Let’s Build Something Resilient</h2>
-  <p>📧 mytreshravi26@gmail.com</p>
-  <p>📱 +1 (732) 799-8325</p>
-</section>
+  <!-- CERTIFICATIONS -->
+  <section class="mb-20 fade-up" style="animation-delay:.4s">
+    <h2 class="text-3xl font-serif mb-6 text-white">Certifications</h2>
+    <div class="grid md:grid-cols-2 gap-4 text-slate-300">
+      <div class="card p-4">AWS Cloud Practitioner Essentials</div>
+      <div class="card p-4">Microsoft Security, Compliance & Identity</div>
+      <div class="card p-4">MTA – Python Programming</div>
+      <div class="card p-4">Oracle Certified Foundations Associate</div>
+      <div class="card p-4">IBM – Introduction to Cloud Computing</div>
+      <div class="card p-4">GRE: 321 (Q:166, V:155)</div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Abhinava Reddy | Engineered with ❤️ & Chaos</p>
+  <!-- EDUCATION -->
+  <section class="mb-20 fade-up" style="animation-delay:.5s">
+    <h2 class="text-3xl font-serif mb-6 text-white">Education</h2>
+    <div class="card p-6 mb-4">
+      <b>MS Computer Science</b> — Rowan University (GPA 3.87)
+    </div>
+    <div class="card p-6">
+      <b>B.Tech Computer Science</b> — SRM Institute of Science & Technology (GPA 8.71)
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="mb-20 fade-up" style="animation-delay:.6s">
+    <h2 class="text-3xl font-serif mb-6 text-white">Achievements & Leadership</h2>
+    <ul class="list-disc list-inside text-slate-300 space-y-2">
+      <li>2nd Place — State Level Badminton Tournament (Hyderabad)</li>
+      <li>Winner — Mobile Game Competition (AARUUSH)</li>
+      <li>Volunteer — MILAN & AARUUSH National Festivals</li>
+      <li>Restaurant Supervisor — Operations & Staff Management</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="text-center fade-up" style="animation-delay:.7s">
+    <h2 class="text-3xl font-serif mb-4 text-white">Contact</h2>
+    <p class="text-slate-300">📧 mytreshravi26@gmail.com</p>
+    <p class="text-slate-300">📞 +1 (732) 799-8325</p>
+  </section>
+
+</main>
+
+<footer class="text-center py-10 text-slate-500 text-sm">
+  © 2026 Mytresh Ravi — DevOps • SRE • Cloud Engineering
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
