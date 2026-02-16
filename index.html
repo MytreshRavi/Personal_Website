@@ -216,18 +216,39 @@
         <div class="space-y-3 opacity-80 leading-relaxed text-sm">
 
           <p>
-            Designed and operated AWS infrastructure supporting 50+ microservices,
-            emphasizing high availability and scalability.
+            Designed, deployed, and operated AWS-based cloud infrastructure supporting
+            more than 50 microservices across development, staging, and production
+            environments, emphasizing high availability and horizontal scalability.
           </p>
 
           <p>
-            Automated infrastructure provisioning using Terraform and Ansible,
-            eliminating 70% of manual tasks and improving deployment consistency.
+            Built infrastructure automation workflows using Terraform and Ansible,
+            eliminating approximately 70% of manual provisioning tasks and improving
+            deployment consistency and reliability across environments.
           </p>
 
           <p>
-            Maintained 99.9% uptime via monitoring and observability solutions
-            using CloudWatch and Grafana.
+            Maintained 99.9% uptime by implementing proactive monitoring, alerting,
+            and observability strategies using CloudWatch, Grafana, and log-driven
+            diagnostic tooling.
+          </p>
+
+          <p>
+            Participated in 24×7 on-call rotations, performing production incident
+            triage, mitigation, and root cause analysis. Implemented long-term fixes
+            that improved platform stability and reduced recurrence of critical issues.
+          </p>
+
+          <p>
+            Led cost optimization and performance tuning initiatives, identifying
+            inefficient resource utilization patterns and implementing improvements
+            without compromising SLA targets.
+          </p>
+
+          <p>
+            Collaborated closely with engineering teams to improve deployment strategies,
+            operational workflows, and reliability best practices across cloud-native
+            services.
           </p>
 
         </div>
@@ -272,7 +293,6 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-
 <section id="projects" class="py-24 px-6">
 
   <div class="max-w-6xl mx-auto">
@@ -283,22 +303,135 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <div class="card-hover rounded-3xl p-6"
+      <!-- Project 1 -->
+      <div class="card-hover rounded-3xl overflow-hidden"
            style="background: var(--secondary-surface);">
-        <b>Driver Drowsiness Detection System</b><br>
-        Real-time EAR-based fatigue detection achieving 92% accuracy.
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+          🚗
+        </div>
+
+        <div class="p-6 space-y-3 text-sm opacity-80 leading-relaxed">
+
+          <h3 class="font-heading font-bold text-lg">
+            Driver Drowsiness Detection and Alerting System
+          </h3>
+
+          <p class="opacity-60">
+            IEEE Published Research
+          </p>
+
+          <p>
+            Developed a real-time fatigue detection system leveraging computer vision
+            techniques and Eye Aspect Ratio (EAR) tracking to identify drowsiness events
+            with high accuracy and low latency.
+          </p>
+
+          <p>
+            Achieved 92% detection accuracy with alert triggering under 200 ms, ensuring
+            responsiveness suitable for safety-critical scenarios.
+          </p>
+
+          <p>
+            Implemented modular architecture, robust error handling, and performance
+            optimizations to maintain stability under varying environmental conditions.
+          </p>
+
+          <p>
+            Validated model behavior across diverse lighting and head-movement scenarios
+            to minimize false positives and improve real-world reliability.
+          </p>
+
+          <div class="pt-2 opacity-60 text-xs">
+            Python • OpenCV • Real-Time Processing • Computer Vision
+          </div>
+
+        </div>
       </div>
 
-      <div class="card-hover rounded-3xl p-6"
+      <!-- Project 2 -->
+      <div class="card-hover rounded-3xl overflow-hidden"
            style="background: var(--secondary-surface);">
-        <b>Real-Time IoT Monitoring Platform</b><br>
-        MQTT telemetry pipeline with Grafana dashboards.
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--secondary-action), var(--primary-action));">
+          🌎
+        </div>
+
+        <div class="p-6 space-y-3 text-sm opacity-80 leading-relaxed">
+
+          <h3 class="font-heading font-bold text-lg">
+            Real-Time IoT Environmental Monitoring System
+          </h3>
+
+          <p>
+            Designed and implemented an end-to-end telemetry pipeline for continuous
+            monitoring of gas concentration, temperature, and humidity sensors.
+          </p>
+
+          <p>
+            Built a secure MQTT → Python → InfluxDB ingestion pipeline capable of handling
+            high-frequency time-series data streams with sub-second telemetry updates.
+          </p>
+
+          <p>
+            Optimized retention policies and storage strategies to maintain long-term
+            historical visibility while keeping storage utilization efficient.
+          </p>
+
+          <p>
+            Developed Grafana dashboards with anomaly detection logic enabling rapid
+            identification of abnormal sensor behavior and environmental spikes.
+          </p>
+
+          <div class="pt-2 opacity-60 text-xs">
+            MQTT • Python • InfluxDB • Grafana • Time-Series Data
+          </div>
+
+        </div>
       </div>
 
-      <div class="card-hover rounded-3xl p-6"
+      <!-- Project 3 -->
+      <div class="card-hover rounded-3xl overflow-hidden"
            style="background: var(--secondary-surface);">
-        <b>COVID-19 Detection from Chest X-Ray</b><br>
-        CNN & VGG16 classifier achieving 95.5% accuracy.
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+          🩺
+        </div>
+
+        <div class="p-6 space-y-3 text-sm opacity-80 leading-relaxed">
+
+          <h3 class="font-heading font-bold text-lg">
+            COVID-19 Detection from Chest X-Ray Images
+          </h3>
+
+          <p>
+            Developed a deep learning pipeline using CNN and transfer learning
+            methodologies to classify chest X-ray images for COVID-19 detection.
+          </p>
+
+          <p>
+            Achieved 95.5% classification accuracy using VGG16 architecture while
+            prioritizing high recall to minimize false negative diagnoses.
+          </p>
+
+          <p>
+            Automated inference workflows supporting batch predictions across
+            10,000+ medical images, significantly reducing manual review effort.
+          </p>
+
+          <p>
+            Designed the model pipeline as a reusable inference module enabling
+            integration into future research or clinical validation systems.
+          </p>
+
+          <div class="pt-2 opacity-60 text-xs">
+            Python • CNN • VGG16 • Deep Learning • Medical Imaging
+          </div>
+
+        </div>
       </div>
 
     </div>
