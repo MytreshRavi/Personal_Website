@@ -5,171 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mytresh Ravi | DevOps • SRE • Cloud Engineer</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Montserrat', sans-serif; }
-
+    body { box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    * { margin: 0; padding: 0; }
     .font-serif { font-family: 'Cormorant Garamond', serif; }
 
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(30px); }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .fade-up { animation: fade-up 1s ease forwards; opacity: 0; }
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out forwards;
+      opacity: 0;
+    }
 
-    .card {
+    .professional-card {
+      transition: all .4s ease;
       background: rgba(30,41,59,.35);
       backdrop-filter: blur(14px);
       border: 1px solid rgba(148,163,184,.15);
-      border-radius: 1rem;
-      transition: all .3s ease;
+      border-radius: 1.25rem;
     }
 
-    .card:hover {
+    .professional-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,.45);
       border-color: rgba(245,158,11,.5);
+      box-shadow: 0 25px 60px rgba(0,0,0,.45);
     }
 
-    .tag {
+    .expertise-tag {
       background: rgba(245,158,11,.1);
       border: 1px solid rgba(245,158,11,.3);
       color: #fbbf24;
-      padding: .4rem .9rem;
+      padding: .45rem 1rem;
       border-radius: 9999px;
       font-size: .8rem;
     }
   </style>
 </head>
 
-<body class="min-h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200">
+<body class="h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200">
 
-<main class="max-w-6xl mx-auto px-6 py-20">
+<div class="w-full h-full overflow-auto relative">
 
-  <!-- HERO -->
-  <section class="text-center mb-24 fade-up">
-    <h1 class="text-6xl font-serif font-bold text-white mb-4">Mytresh Ravi</h1>
-    <p class="text-2xl text-amber-400 mb-3">DevOps • Site Reliability • Cloud Engineer</p>
-    <p class="max-w-3xl mx-auto text-slate-400">
-      Building scalable, fault-tolerant cloud systems with a strong focus on
-      automation, reliability, monitoring, and incident response.
-    </p>
-  </section>
+<main class="relative z-10 min-h-full flex items-center justify-center px-6 py-16">
+<div class="w-full max-w-5xl">
 
-  <!-- SKILLS -->
-  <section class="mb-20 fade-up" style="animation-delay:.1s">
-    <h2 class="text-3xl font-serif mb-6 text-white">Core Expertise</h2>
-    <div class="flex flex-wrap gap-3">
-      <span class="tag">AWS (EKS, EC2, S3, IAM, RDS, CloudWatch)</span>
-      <span class="tag">Kubernetes & Docker</span>
-      <span class="tag">Terraform & Ansible</span>
-      <span class="tag">CI/CD (Jenkins, GitHub)</span>
-      <span class="tag">Monitoring & Observability</span>
-      <span class="tag">Incident Response & On-Call</span>
-      <span class="tag">Disaster Recovery</span>
-      <span class="tag">Python & Bash</span>
-    </div>
-  </section>
+<!-- ================= HEADER ================= -->
+<header class="text-center mb-16 animate-fade-in-up">
+  <h1 class="text-6xl font-serif font-bold text-white mb-4">
+    Mytresh Ravi
+  </h1>
 
-  <!-- EXPERIENCE -->
-  <section class="mb-20 fade-up" style="animation-delay:.2s">
-    <h2 class="text-3xl font-serif mb-8 text-white">Professional Experience</h2>
+  <p class="text-2xl text-amber-500 mb-3">
+    DevOps • Site Reliability • Cloud Engineer
+  </p>
 
-    <div class="card p-8 mb-6">
-      <h3 class="text-xl text-white font-semibold">Site Reliability Engineer — Xoriant Solutions</h3>
-      <p class="text-sm text-slate-400 mb-4">Jul 2022 – Nov 2023</p>
-      <ul class="list-disc list-inside text-slate-300 space-y-2">
-        <li>Improved system availability by <b>35%</b> through fault-tolerant cloud architectures</li>
-        <li>Reduced unplanned downtime by <b>40%</b> using proactive monitoring and DR strategies</li>
-        <li>Built Jenkins CI/CD pipelines cutting release cycles by <b>50%</b></li>
-        <li>Executed chaos testing and failover drills, reducing MTTR by <b>50%</b></li>
-      </ul>
-    </div>
+  <p class="text-lg text-slate-400 italic mb-6">
+    Designing resilient cloud platforms that scale, self-heal, and recover under pressure
+  </p>
 
-    <div class="card p-8">
-      <h3 class="text-xl text-white font-semibold">DevOps Engineer — Synectiks</h3>
-      <p class="text-sm text-slate-400 mb-4">Jan 2020 – May 2022</p>
-      <ul class="list-disc list-inside text-slate-300 space-y-2">
-        <li>Designed AWS cloud-native infrastructure supporting <b>99.9%</b> uptime</li>
-        <li>Automated infrastructure using Terraform & Ansible, eliminating <b>70%</b> manual work</li>
-        <li>Led on-call rotations, RCA, cost optimization and long-term stability fixes</li>
-      </ul>
-    </div>
-  </section>
+  <p class="text-slate-300 max-w-3xl mx-auto leading-relaxed">
+    DevOps / Site Reliability Engineer with 4 years of experience building and operating 
+    highly available cloud-native systems on AWS and Kubernetes. Specialized in infrastructure 
+    automation, CI/CD pipelines, monitoring & observability, disaster recovery, and production 
+    incident management.
+  </p>
+</header>
 
-  <!-- FLAGSHIP PROJECT -->
-  <section class="mb-20 fade-up" style="animation-delay:.3s">
-    <h2 class="text-3xl font-serif mb-6 text-white">Flagship Project</h2>
-    <div class="card p-8">
-      <h3 class="text-2xl text-amber-400 font-semibold mb-3">
-        AETHERION — Cloud Reliability Intelligence Platform
-      </h3>
-      <p class="text-slate-300 mb-4">
-        A simulated SRE platform demonstrating monitoring, incident prediction,
-        chaos testing, and disaster recovery workflows for Kubernetes and AWS systems.
-      </p>
-      <ul class="list-disc list-inside text-slate-300 space-y-2">
-        <li>Modeled real-world AWS & Kubernetes metrics and logs</li>
-        <li>Conceptual ML-based incident probability scoring</li>
-        <li>Automated failover and chaos testing scenarios</li>
-        <li>Reduced simulated MTTR by <b>52%</b> under failure conditions</li>
-      </ul>
-    </div>
-  </section>
+<!-- ================= SKILLS ================= -->
+<div class="flex flex-wrap justify-center gap-3 mb-14 animate-fade-in-up">
+  <span class="expertise-tag">AWS (EC2, EKS, S3, IAM, RDS, CloudWatch)</span>
+  <span class="expertise-tag">Kubernetes & Docker</span>
+  <span class="expertise-tag">Terraform & Ansible</span>
+  <span class="expertise-tag">CI/CD (Jenkins, Git)</span>
+  <span class="expertise-tag">Monitoring & Observability</span>
+  <span class="expertise-tag">Incident Response & RCA</span>
+  <span class="expertise-tag">Disaster Recovery & Chaos Testing</span>
+</div>
 
-  <!-- CERTIFICATIONS -->
-  <section class="mb-20 fade-up" style="animation-delay:.4s">
-    <h2 class="text-3xl font-serif mb-6 text-white">Certifications</h2>
-    <div class="grid md:grid-cols-2 gap-4 text-slate-300">
-      <div class="card p-4">AWS Cloud Practitioner Essentials</div>
-      <div class="card p-4">Microsoft Security, Compliance & Identity</div>
-      <div class="card p-4">MTA – Python Programming</div>
-      <div class="card p-4">Oracle Certified Foundations Associate</div>
-      <div class="card p-4">IBM – Introduction to Cloud Computing</div>
-      <div class="card p-4">GRE: 321 (Q:166, V:155)</div>
-    </div>
-  </section>
+<!-- ================= LINKS ================= -->
+<div class="grid md:grid-cols-2 gap-5 mb-16 animate-fade-in-up">
 
-  <!-- EDUCATION -->
-  <section class="mb-20 fade-up" style="animation-delay:.5s">
-    <h2 class="text-3xl font-serif mb-6 text-white">Education</h2>
-    <div class="card p-6 mb-4">
-      <b>MS Computer Science</b> — Rowan University (GPA 3.87)
-    </div>
-    <div class="card p-6">
-      <b>B.Tech Computer Science</b> — SRM Institute of Science & Technology (GPA 8.71)
-    </div>
-  </section>
+  <a href="#" class="professional-card p-6 block">
+    📁 Portfolio & Projects
+  </a>
 
-  <!-- ACHIEVEMENTS -->
-  <section class="mb-20 fade-up" style="animation-delay:.6s">
-    <h2 class="text-3xl font-serif mb-6 text-white">Achievements & Leadership</h2>
-    <ul class="list-disc list-inside text-slate-300 space-y-2">
-      <li>2nd Place — State Level Badminton Tournament (Hyderabad)</li>
-      <li>Winner — Mobile Game Competition (AARUUSH)</li>
-      <li>Volunteer — MILAN & AARUUSH National Festivals</li>
-      <li>Restaurant Supervisor — Operations & Staff Management</li>
+  <a href="#" class="professional-card p-6 block">
+    🔗 LinkedIn Profile
+  </a>
+
+  <a href="mailto:mytreshravi26@gmail.com" class="professional-card p-6 block">
+    📧 mytreshravi26@gmail.com
+  </a>
+
+  <div class="professional-card p-6">
+    📞 +1 (732)-799-8325
+  </div>
+
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="mb-16 animate-fade-in-up">
+
+  <div class="professional-card p-8 mb-6">
+    <h3 class="text-xl text-white font-semibold">
+      Site Reliability Engineer — Xoriant Solutions
+    </h3>
+
+    <p class="text-sm text-slate-400 mb-4">Jun 2024 – Jan 2026</p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed">
+      <li>Led cloud infrastructure migrations improving system availability by 35%</li>
+      <li>Reduced unplanned downtime by 40% through fault-tolerant designs</li>
+      <li>Built Jenkins CI/CD pipelines reducing release cycles by 50%</li>
+      <li>Implemented chaos testing & failover drills reducing MTTR by 50%</li>
+      <li>Collaborated across teams to stabilize production workloads at scale</li>
     </ul>
-  </section>
+  </div>
 
-  <!-- CONTACT -->
-  <section class="text-center fade-up" style="animation-delay:.7s">
-    <h2 class="text-3xl font-serif mb-4 text-white">Contact</h2>
-    <p class="text-slate-300">📧 mytreshravi26@gmail.com</p>
-    <p class="text-slate-300">📞 +1 (732) 799-8325</p>
-  </section>
+  <div class="professional-card p-8">
+    <h3 class="text-xl text-white font-semibold">
+      DevOps Engineer — Synectiks
+    </h3>
 
-</main>
+    <p class="text-sm text-slate-400 mb-4">Jan 2020 – Nov 2023</p>
 
-<footer class="text-center py-10 text-slate-500 text-sm">
-  © 2026 Mytresh Ravi — DevOps • SRE • Cloud Engineering
+    <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed">
+      <li>Designed and operated AWS infrastructure supporting 50+ microservices</li>
+      <li>Eliminated 70% of manual provisioning using Terraform & Ansible</li>
+      <li>Maintained 99.9% uptime through monitoring & incident management</li>
+      <li>Participated in 24×7 on-call rotations performing RCA & reliability fixes</li>
+      <li>Drove cost optimization initiatives without impacting SLA targets</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= EXPERIENCE MODE / CANVAS ================= -->
+<section class="mb-16 animate-fade-in-up">
+  <div class="professional-card p-8">
+    <h2 class="text-3xl font-serif text-white mb-3 text-center">
+      Experience Journey
+    </h2>
+
+    <p class="text-center text-slate-400 mb-5">
+      A playful visualization of continuous movement, growth, and system resilience
+    </p>
+
+    <canvas id="gameCanvas" class="w-full rounded-xl bg-sky-400" height="300"></canvas>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="mb-16 animate-fade-in-up">
+  <div class="professional-card p-6 mb-4">
+    <b>Master of Science in Computer Science</b> — Rowan University  
+    <div class="text-slate-400 text-sm">GPA: 3.87</div>
+  </div>
+
+  <div class="professional-card p-6">
+    <b>Bachelor of Technology in Computer Science</b> — SRM Institute of Science & Technology  
+    <div class="text-slate-400 text-sm">GPA: 8.71</div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center text-slate-500 text-sm mt-12 pb-10">
+  © 2026 Mytresh Ravi — DevOps • Site Reliability • Cloud Engineering
 </footer>
+
+</div>
+</main>
+</div>
+
+<script>
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+let x = 50;
+
+function loop() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "#16a34a";
+  ctx.fillRect(0,260,canvas.width,40);
+  ctx.fillStyle = "#f59e0b";
+  ctx.fillRect(x,220,40,40);
+  x += 2;
+  if (x > canvas.width) x = -40;
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
 
 </body>
 </html>
