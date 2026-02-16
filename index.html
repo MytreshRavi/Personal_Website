@@ -1,206 +1,345 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mytresh Ravi | DevOps • SRE • Cloud Engineer</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Mytresh Ravi | DevOps • Site Reliability • Cloud Engineer</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body { box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    * { margin: 0; padding: 0; }
-    .font-serif { font-family: 'Cormorant Garamond', serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    @keyframes fade-in-up {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .font-heading { font-family: 'Syne', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .animate-fade-in-up {
-      animation: fade-in-up 1s ease-out forwards;
-      opacity: 0;
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .professional-card {
-      transition: all .4s ease;
-      background: rgba(30,41,59,.35);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(148,163,184,.15);
-      border-radius: 1.25rem;
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
     }
 
-    .professional-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(245,158,11,.5);
-      box-shadow: 0 25px 60px rgba(0,0,0,.45);
+    .nav-link { position: relative; }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-action);
+      transition: width .3s ease;
     }
 
-    .expertise-tag {
-      background: rgba(245,158,11,.1);
-      border: 1px solid rgba(245,158,11,.3);
-      color: #fbbf24;
-      padding: .45rem 1rem;
-      border-radius: 9999px;
-      font-size: .8rem;
+    .nav-link:hover::after { width: 100%; }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.35;
+      animation: blob 10s infinite;
     }
+
+    @keyframes blob {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(40px,-20px) scale(1.15); }
+    }
+
+    section { scroll-margin-top: 90px; }
   </style>
 </head>
 
-<body class="h-full bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200">
+<body class="h-full font-body overflow-auto"
+      style="background-color: var(--background); color: var(--text);">
 
-<div class="w-full h-full overflow-auto relative">
+<div class="blob w-96 h-96 top-0 left-0"
+     style="background: var(--primary-action);"></div>
 
-<main class="relative z-10 min-h-full flex items-center justify-center px-6 py-16">
-<div class="w-full max-w-5xl">
+<div class="blob w-80 h-80 bottom-0 right-0"
+     style="background: var(--secondary-action);"></div>
 
-<!-- ================= HEADER ================= -->
-<header class="text-center mb-16 animate-fade-in-up">
-  <h1 class="text-6xl font-serif font-bold text-white mb-4">
-    Mytresh Ravi
-  </h1>
+<!-- ================= NAVIGATION ================= -->
 
-  <p class="text-2xl text-amber-500 mb-3">
-    DevOps • Site Reliability • Cloud Engineer
-  </p>
+<nav class="fixed top-0 left-0 right-0 backdrop-blur-xl border-b z-50"
+     style="background: var(--background); border-color: var(--secondary-surface);">
 
-  <p class="text-lg text-slate-400 italic mb-6">
-    Designing resilient cloud platforms that scale, self-heal, and recover under pressure
-  </p>
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-  <p class="text-slate-300 max-w-3xl mx-auto leading-relaxed">
-    DevOps / Site Reliability Engineer with 4 years of experience building and operating 
-    highly available cloud-native systems on AWS and Kubernetes. Specialized in infrastructure 
-    automation, CI/CD pipelines, monitoring & observability, disaster recovery, and production 
-    incident management.
-  </p>
-</header>
+    <a href="#hero"
+       class="font-heading font-bold text-2xl"
+       style="color: var(--primary-action);">
+       MR
+    </a>
 
-<!-- ================= SKILLS ================= -->
-<div class="flex flex-wrap justify-center gap-3 mb-14 animate-fade-in-up">
-  <span class="expertise-tag">AWS (EC2, EKS, S3, IAM, RDS, CloudWatch)</span>
-  <span class="expertise-tag">Kubernetes & Docker</span>
-  <span class="expertise-tag">Terraform & Ansible</span>
-  <span class="expertise-tag">CI/CD (Jenkins, Git)</span>
-  <span class="expertise-tag">Monitoring & Observability</span>
-  <span class="expertise-tag">Incident Response & RCA</span>
-  <span class="expertise-tag">Disaster Recovery & Chaos Testing</span>
-</div>
+    <div class="flex gap-8 text-sm">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
 
-<!-- ================= LINKS ================= -->
-<div class="grid md:grid-cols-2 gap-5 mb-16 animate-fade-in-up">
-  <a href="#" class="professional-card p-6 block">📁 Portfolio & Projects</a>
-  <a href="#" class="professional-card p-6 block">🔗 LinkedIn Profile</a>
-  <a href="mailto:mytreshravi26@gmail.com" class="professional-card p-6 block">📧 mytreshravi26@gmail.com</a>
-  <div class="professional-card p-6">📞 +1 (732)-799-8325</div>
-</div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section id="hero"
+         class="min-h-screen flex items-center justify-center px-6 text-center">
+
+  <div class="max-w-4xl">
+
+    <h1 class="font-heading font-bold text-6xl mb-4">
+        Mytresh Ravi
+    </h1>
+
+    <p class="text-2xl gradient-text font-heading font-semibold mb-4">
+       DevOps • Site Reliability • Cloud Engineer
+    </p>
+
+    <p class="text-lg opacity-70">
+       Designing resilient cloud-native systems, improving reliability,
+       and scaling infrastructure through automation
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-24 px-6">
+
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="font-heading font-bold text-4xl mb-12 text-center">
+      About <span class="gradient-text">Me</span>
+    </h2>
+
+    <div class="card-hover rounded-3xl p-10"
+         style="background: var(--secondary-surface);">
+
+      DevOps / Site Reliability Engineer with 4 years of experience designing,
+      deploying, and operating highly available cloud-native systems on AWS
+      and Kubernetes. Strong expertise in infrastructure automation, CI/CD,
+      monitoring & observability, disaster recovery, and incident response.
+      Proven track record of improving availability, reducing MTTR, and
+      supporting production systems at scale.
+
+    </div>
+
+  </div>
+</section>
 
 <!-- ================= EXPERIENCE ================= -->
-<section class="mb-16 animate-fade-in-up">
 
-  <div class="professional-card p-8 mb-6">
-    <h3 class="text-xl text-white font-semibold">
-      Site Reliability Engineer — Xoriant Solutions
-    </h3>
+<section id="experience" class="py-24 px-6">
 
-    <p class="text-sm text-slate-400 mb-4">Jun 2024 – Jan 2026</p>
+  <div class="max-w-5xl mx-auto">
 
-    <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed">
-      <li>Led cloud infrastructure migrations improving system availability by 35%</li>
-      <li>Reduced unplanned downtime by 40% through fault-tolerant designs</li>
-      <li>Built Jenkins CI/CD pipelines reducing release cycles by 50%</li>
-      <li>Implemented chaos testing & failover drills reducing MTTR by 50%</li>
-    </ul>
+    <h2 class="font-heading font-bold text-4xl mb-12 text-center">
+      Professional <span class="gradient-text">Experience</span>
+    </h2>
+
+    <div class="space-y-8">
+
+      <div class="card-hover rounded-3xl p-8"
+           style="background: var(--secondary-surface);">
+
+        <h3 class="font-heading font-bold text-xl">
+          Site Reliability Engineer — Xoriant Solutions
+        </h3>
+
+        <p class="text-sm opacity-60 mb-3">
+          Jun 2024 – Jan 2026
+        </p>
+
+        <p class="opacity-75">
+          Led cloud infrastructure migrations improving system availability by 35%,
+          reduced unplanned downtime by 40%, built CI/CD pipelines, and implemented
+          chaos testing & disaster recovery strategies reducing MTTR by 50%.
+        </p>
+
+      </div>
+
+      <div class="card-hover rounded-3xl p-8"
+           style="background: var(--secondary-surface);">
+
+        <h3 class="font-heading font-bold text-xl">
+          DevOps Engineer — Synectiks
+        </h3>
+
+        <p class="text-sm opacity-60 mb-3">
+          Jan 2020 – Nov 2023
+        </p>
+
+        <p class="opacity-75">
+          Designed and managed AWS infrastructure supporting 50+ microservices,
+          automated provisioning with Terraform & Ansible, maintained 99.9% uptime,
+          and led production incident response & platform reliability improvements.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
+</section>
 
-  <div class="professional-card p-8">
-    <h3 class="text-xl text-white font-semibold">
-      DevOps Engineer — Synectiks
-    </h3>
+<!-- ================= SKILLS ================= -->
 
-    <p class="text-sm text-slate-400 mb-4">Jan 2020 – Nov 2023</p>
+<section id="skills" class="py-24 px-6">
 
-    <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed">
-      <li>Designed and operated AWS infrastructure supporting 50+ microservices</li>
-      <li>Eliminated 70% of manual provisioning using Terraform & Ansible</li>
-      <li>Maintained 99.9% uptime through monitoring & incident management</li>
-      <li>Drove cost optimization initiatives without impacting SLA targets</li>
-    </ul>
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="font-heading font-bold text-4xl mb-12 text-center">
+      Skills & <span class="gradient-text">Expertise</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="card-hover rounded-3xl p-6"
+           style="background: var(--secondary-surface);">
+        AWS / Cloud Architecture<br>
+        Kubernetes / Docker<br>
+        Terraform / Ansible<br>
+        CI/CD / Jenkins / Git<br>
+        Monitoring / Grafana / CloudWatch
+      </div>
+
+      <div class="card-hover rounded-3xl p-6"
+           style="background: var(--secondary-surface);">
+        Incident Response<br>
+        Disaster Recovery<br>
+        Reliability Engineering<br>
+        Linux / Bash / Python
+      </div>
+
+    </div>
+
   </div>
-
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section class="mb-16 animate-fade-in-up">
-  <h2 class="text-3xl font-serif text-white mb-6 text-center">
-    Selected Projects
-  </h2>
 
-  <div class="grid md:grid-cols-2 gap-5">
+<section id="projects" class="py-24 px-6">
 
-    <div class="professional-card p-6">
-      <h3 class="text-white font-semibold mb-2">
-        Driver Drowsiness Detection & Alerting System (IEEE Published)
-      </h3>
+  <div class="max-w-6xl mx-auto">
 
-      <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
-        <li>• Built a real-time fatigue detection system using Eye Aspect Ratio tracking, achieving 92% accuracy and triggering alerts within &lt;200 ms.</li>
-        <li>• Implemented modular architecture, robust error handling, and performance optimizations.</li>
-        <li>• Validated across diverse lighting and head-movement conditions to minimize false positives.</li>
-      </ul>
+    <h2 class="font-heading font-bold text-4xl mb-16 text-center">
+      Featured <span class="gradient-text">Projects</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="card-hover rounded-3xl overflow-hidden"
+           style="background: var(--secondary-surface);">
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+          🚗
+        </div>
+
+        <div class="p-6">
+          <h3 class="font-heading font-bold text-xl mb-2">
+            Driver Drowsiness Detection System
+          </h3>
+          <p class="text-sm opacity-70 mb-3">IEEE Published Research</p>
+          <p class="opacity-75 text-sm">
+            Real-time fatigue detection using Eye Aspect Ratio tracking,
+            achieving 92% accuracy with sub-200 ms alert latency.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-hover rounded-3xl overflow-hidden"
+           style="background: var(--secondary-surface);">
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--secondary-action), var(--primary-action));">
+          🌎
+        </div>
+
+        <div class="p-6">
+          <h3 class="font-heading font-bold text-xl mb-2">
+            Real-Time IoT Monitoring Platform
+          </h3>
+          <p class="opacity-75 text-sm">
+            MQTT → Python → InfluxDB telemetry pipeline with Grafana dashboards
+            for anomaly detection & real-time observability.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-hover rounded-3xl overflow-hidden"
+           style="background: var(--secondary-surface);">
+
+        <div class="h-40 flex items-center justify-center text-5xl"
+             style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+          🩺
+        </div>
+
+        <div class="p-6">
+          <h3 class="font-heading font-bold text-xl mb-2">
+            COVID-19 Detection from Chest X-Ray
+          </h3>
+          <p class="opacity-75 text-sm">
+            CNN & VGG16-based classifier achieving 95.5% accuracy with high recall,
+            automating screening for 10,000+ images.
+          </p>
+        </div>
+      </div>
+
     </div>
-
-    <div class="professional-card p-6">
-      <h3 class="text-white font-semibold mb-2">
-        Real-Time IoT Environmental Monitoring System (GitHub)
-      </h3>
-
-      <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
-        <li>• Designed an end-to-end IoT solution monitoring gas, temperature, and humidity with sub-second telemetry.</li>
-        <li>• Built a secure MQTT → Python → InfluxDB ingestion pipeline for high-frequency time-series data.</li>
-        <li>• Optimized retention policies for continuous sensor streams and efficient storage usage.</li>
-        <li>• Implemented Grafana dashboards with anomaly detection for real-time insights.</li>
-      </ul>
-    </div>
-
-    <div class="professional-card p-6">
-      <h3 class="text-white font-semibold mb-2">
-        COVID-19 Detection from Chest X-Ray
-      </h3>
-
-      <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
-        <li>• Developed a deep learning pipeline using CNN & Transfer Learning for automated screening.</li>
-        <li>• Processed 10,000+ images, reducing manual review effort by 70%.</li>
-        <li>• Achieved 95.5% accuracy using VGG16 while prioritizing high recall for clinical safety.</li>
-        <li>• Deployed as a modular inference pipeline enabling scalable batch predictions.</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
-<!-- ================= EDUCATION ================= -->
-<section class="mb-16 animate-fade-in-up">
-  <div class="professional-card p-6 mb-4">
-    <b>Master of Science in Computer Science</b> — Rowan University  
-    <div class="text-slate-400 text-sm">GPA: 3.87</div>
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="py-24 px-6">
+
+  <div class="max-w-4xl mx-auto text-center space-y-3">
+    <div>📧 mytreshravi26@gmail.com</div>
+    <div>📞 +1 (732)-799-8325</div>
+    <div>📍 New Jersey, United States</div>
   </div>
 
-  <div class="professional-card p-6">
-    <b>Bachelor of Technology in Computer Science</b> — SRM Institute of Science & Technology  
-    <div class="text-slate-400 text-sm">GPA: 8.71</div>
-  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="text-center text-slate-500 text-sm mt-12 pb-10">
+<footer class="py-10 text-center opacity-50">
   © 2026 Mytresh Ravi — DevOps • Site Reliability • Cloud Engineering
 </footer>
 
-</div>
-</main>
-</div>
+<script>
+const config = {
+  background_color: '#0f0f1a',
+  surface_color: '#1a1a2e',
+  text_color: '#f0f0f5',
+  primary_action_color: '#6366f1',
+  secondary_action_color: '#ec4899'
+};
+
+document.documentElement.style.setProperty('--background', config.background_color);
+document.documentElement.style.setProperty('--secondary-surface', config.surface_color);
+document.documentElement.style.setProperty('--text', config.text_color);
+document.documentElement.style.setProperty('--primary-action', config.primary_action_color);
+document.documentElement.style.setProperty('--secondary-action', config.secondary_action_color);
+</script>
 
 </body>
 </html>
